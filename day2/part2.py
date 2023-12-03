@@ -50,7 +50,7 @@ def parse_game_data(game_str):
     return game_data
 
 
-file = open('part1.txt', 'r')
+file = open('sample.txt', 'r')
 lines = file.readlines()
 
 

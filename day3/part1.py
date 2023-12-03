@@ -13,7 +13,7 @@ def has_adjacent_symbol(schematic: list[str], pos: tuple[int, int]) -> bool:
         x = pos[0] + check[0]
         y = pos[1] + check[1]
         if 0 <= y < len(schematic) and 0 <= x < len(schematic[y]) \
-                and not (schematic[y][x].isdigit() or schematic[y][x] == '.'):
+                and not (schematic[y][x].isdigit() or schematic[y][x] == '\n' or schematic[y][x] == '.'):
             return True
     return False
 
@@ -51,7 +51,7 @@ test_schematic = [
     "+.........34",
     ".......-12..",
     "..78........",
-    "..*....60...",
+    "..*....60..4",
     "78..........",
     ".......23...",
     "....90*12...",
@@ -67,7 +67,7 @@ def test_build_numbers_with_position():
         12, 34, 12, 78, 78, 23, 90, 12, 2, 2, 12, 1, 1, 56]
 
 
-file = open('part1.txt', 'r')
+file = open('sample.txt', 'r')
 lines = file.readlines()
 
 # Calculating the sum

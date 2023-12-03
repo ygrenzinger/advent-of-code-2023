@@ -23,7 +23,7 @@ def sum_calibration_values(lines):
     return total
 
 
-file = open('part1.txt', 'r')
+file = open('sample.txt', 'r')
 lines = file.readlines()
 
 result = sum_calibration_values(lines)
